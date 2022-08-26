@@ -51,4 +51,13 @@ mysteriousButton.onclick = function() {
     mysteriousButtonAction();
 }
 
-/* function testForGitHub() {}*/
+let stoneButton = document.getElementById('stone')
+
+function stoneButtonAction() {
+  let yourAnswer = prompt('you really want this?')
+}
+
+stoneButton.onclick = function () {
+  stoneButtonAction();
+}
+
