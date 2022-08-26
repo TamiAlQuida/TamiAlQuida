@@ -51,5 +51,4 @@ mysteriousButton.onclick = function() {
     mysteriousButtonAction();
 }
 
-function testForGitHub()
-
+/* function testForGitHub() {}
