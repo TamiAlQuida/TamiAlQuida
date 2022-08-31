@@ -42,7 +42,7 @@ catImage.onclick = function changeCat() {
 let mysteriousButton = document.querySelector('button');
 
 function mysteriousButtonAction() {
-    let myName = prompt('whats your name?');
+    let myName = prompt('whats your name then?');
     localStorage.setItem('name', myName);
     myHeading.textContent = 'Greetings ' + myName
 }
