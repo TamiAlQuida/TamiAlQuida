@@ -58,10 +58,20 @@ let stoneButton = document.getElementById('stone');
 let paperButton = document.getElementById('paper');
 let scissorsButton = document.getElementById('scissors');
 
+function randomStonePaperScissors() {
+  let randomNumber = Math.floor(Math.random() * (3) + 1);
+  if (randomNumber === 1) {
+    computersChoice.textContent = 'Stone'
+  }
+  else if (randomNumber === 2) {
+    computersChoice.textContent = 'Paper'
+  }
+  else {computersChoice.textContent = 'Scissors'}
+}
+
 function stoneButtonAction() {
   yourChoice.textContent = 'Stone';
-  let randomNumber = Math.floor(Math.random() * (3) + 1);
-  computersChoice.textContent = randomNumber;
+  randomStonePaperScissors();
 }
 stoneButton.onclick = function () {
   stoneButtonAction();
@@ -69,6 +79,7 @@ stoneButton.onclick = function () {
 
 function paperButtonAction() {
   yourChoice.textContent = 'Paper';
+  randomStonePaperScissors();
 }
 paperButton.onclick = function () {
   paperButtonAction();
@@ -76,6 +87,7 @@ paperButton.onclick = function () {
 
 function scissorsButtonAction() {
   yourChoice.textContent = 'Scissors';
+  randomStonePaperScissors();
 }
 scissorsButton.onclick = function () {
   scissorsButtonAction();
