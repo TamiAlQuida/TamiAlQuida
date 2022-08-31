@@ -51,10 +51,17 @@ mysteriousButton.onclick = function() {
     mysteriousButtonAction();
 }
 
+let computersChoice = getElementById('StonePaperScissorsBotChoice')
+let yourChoice = getElementById("StonePaperScissorsPlayerChoice")
+
 let stoneButton = document.getElementById('stone')
+let paperButton = document.getElementById('paper')
+let scissorsButton = document.getElementById('scissors')
+
+let yourAnswer = 'nothing'
 
 function stoneButtonAction() {
-  let yourAnswer = prompt('you really want this?')
+  let yourAnswer = 'stone'
 }
 
 stoneButton.onclick = function () {
