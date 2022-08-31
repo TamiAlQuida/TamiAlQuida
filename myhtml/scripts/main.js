@@ -60,6 +60,8 @@ let scissorsButton = document.getElementById('scissors');
 
 function stoneButtonAction() {
   yourChoice.textContent = 'Stone';
+  let randomNumber = Math.floor(Math.random() * (3) + 1);
+  computersChoice.textContent = randomNumber;
 }
 stoneButton.onclick = function () {
   stoneButtonAction();
