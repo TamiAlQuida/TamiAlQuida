@@ -51,20 +51,30 @@ mysteriousButton.onclick = function() {
     mysteriousButtonAction();
 }
 
-let computersChoice = getElementById('StonePaperScissorsBotChoice');
-let yourChoice = getElementById("StonePaperScissorsPlayerChoice");
+let computersChoice = document.getElementById("BotChoice");
+let yourChoice = document.getElementById("PlayerChoice");
 
 let stoneButton = document.getElementById('stone');
 let paperButton = document.getElementById('paper');
 let scissorsButton = document.getElementById('scissors');
 
-let yourAnswer = 'nothing';
-
 function stoneButtonAction() {
-  let yourAnswer = 'stone';
+  yourChoice.textContent = 'Stone';
 }
-
 stoneButton.onclick = function () {
   stoneButtonAction();
 }
 
+function paperButtonAction() {
+  yourChoice.textContent = 'Paper';
+}
+paperButton.onclick = function () {
+  paperButtonAction();
+}
+
+function scissorsButtonAction() {
+  yourChoice.textContent = 'Scissors';
+}
+scissorsButton.onclick = function () {
+  scissorsButtonAction();
+}
