@@ -69,12 +69,44 @@ function randomStonePaperScissors() {
   else {computersChoice.textContent = 'Scissors'}
 }
 
+let ComputerScoreVariable = 0
+let PlayerScoreVariable = 0
+
+function keepingScore() {
+  let ComputerScore = document.getElementById("ComputerScore");
+  let PlayerScore = document.getElementById("PlayerScore");
+
+  if (yourChoice.textContent === 'Stone' && 
+  computersChoice.textContent === 'Stone' || yourChoice.textContent === 'Scissors' && 
+  computersChoice.textContent === 'Scissors' || yourChoice.textContent === 'Paper' && 
+  computersChoice.textContent === 'Paper') {
+    ComputerScore.textContent = 'Computer score:' + ComputerScoreVariable
+    PlayerScore.textContent = 'Player score:' + PlayerScoreVariable
+  }
+  
+  else if ((yourChoice.textContent === 'Stone' && 
+  computersChoice.textContent === 'Scissors') || (yourChoice.textContent === 'Paper' && 
+  computersChoice.textContent === 'Stone') || (yourChoice.textContent === 'Scissors' && 
+  computersChoice.textContent === 'Paper')) {
+    PlayerScoreVariable = PlayerScoreVariable + 1
+    ComputerScore.textContent = 'Computer score:' + ComputerScoreVariable
+    PlayerScore.textContent = 'Player score:' + PlayerScoreVariable
+  }
+
+  else {
+    ComputerScoreVariable = ComputerScoreVariable + 1
+    ComputerScore.textContent = 'Computer score:' + ComputerScoreVariable
+    PlayerScore.textContent = 'Player score:' + PlayerScoreVariable
+  }
+}
+
 function stoneButtonAction() {
   yourChoice.textContent = 'Stone';
   randomStonePaperScissors();
 }
 stoneButton.onclick = function () {
   stoneButtonAction();
+  keepingScore();
 }
 
 function paperButtonAction() {
@@ -83,6 +115,7 @@ function paperButtonAction() {
 }
 paperButton.onclick = function () {
   paperButtonAction();
+  keepingScore()
 }
 
 function scissorsButtonAction() {
@@ -91,4 +124,5 @@ function scissorsButtonAction() {
 }
 scissorsButton.onclick = function () {
   scissorsButtonAction();
+  keepingScore()
 }
